@@ -2,118 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Bootstrap</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS personalizado -->
+    <title>Galería Interactiva</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Mi Web</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <h1>Galería Interactiva</h1>
 
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-            </ul>
-        </div>
+    <div class="controls">
+        <input 
+            type="url" 
+            id="imageUrl" 
+            placeholder="Ingrese la URL de la imagen"
+        >
+        <button id="addImage">Agregar Imagen</button>
+        <button id="deleteImage">Eliminar Imagen Seleccionada</button>
     </div>
-</nav>
 
-<!-- ENCABEZADO -->
-<header class="text-center p-5 bg-light">
-    <h1>Bienvenido a mi página web</h1>
-    <p class="lead">Diseño moderno con Bootstrap 5 y CSS3</p>
-</header>
-
-<!-- SECCIÓN PRINCIPAL -->
-<section class="container my-5">
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <div class="card h-100 shadow-custom">
-                <img src="assets/img/imagen1.jpg" class="card-img-top img-fluid" alt="Imagen">
-                <div class="card-body">
-                    <h3 class="card-title">Diseño Responsivo</h3>
-                    <p class="card-text">La página se adapta a cualquier tamaño de pantalla.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card h-100 shadow-custom">
-                <div class="card-body">
-                    <h3 class="card-title">Bootstrap 5</h3>
-                    <p class="card-text">Uso de grid, flexbox y componentes interactivos.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card h-100 shadow-custom">
-                <div class="card-body">
-                    <h3 class="card-title">CSS Avanzado</h3>
-                    <p class="card-text">Animaciones, transiciones y estilos personalizados.</p>
-                </div>
-            </div>
-        </div>
-
+    <div id="gallery" class="gallery">
+        <!-- Imágenes dinámicas -->
     </div>
-</section>
 
-<!-- BOTÓN COLLAPSE -->
-<div class="container text-center mb-5">
-    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#info">
-        Mostrar más información
-    </button>
-
-    <div id="info" class="collapse mt-3">
-        <p>Este contenido se muestra y oculta usando el componente collapse de Bootstrap.</p>
-    </div>
-</div>
-
-<!-- FORMULARIO -->
-<section class="container mb-5">
-    <h2 class="text-center mb-4">Contacto</h2>
-
-    <form class="mx-auto form-custom">
-        <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="text" class="form-control" placeholder="Ingresa tu nombre">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="correo@ejemplo.com">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Comentarios</label>
-            <textarea class="form-control" rows="4"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center bg-light p-3">
-    <p>© 2025 Mi Sitio Web</p>
-    <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">GitHub</a>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

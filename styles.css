@@ -1,37 +1,51 @@
-/* Botón personalizado */
-.btn-primary {
-    background-color: #ff5733;
-    border: none;
-    transition: transform 0.3s, background-color 0.3s;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #a7981a;
+    margin: 0;
+    padding: 20px;
 }
 
-.btn-primary:hover {
-    background-color: #c70039;
+h1 {
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
     transform: scale(1.05);
 }
 
-/* Sombra personalizada */
-.shadow-custom {
-    border-radius: 15px;
-    transition: transform 0.3s;
-}
-
-.shadow-custom:hover {
-    transform: translateY(-5px);
-}
-
-/* Formulario */
-.form-custom {
-    max-width: 500px;
-}
-
-/* Media query personalizada */
-@media (max-width: 576px) {
-    body {
-        background-color: #f8f9fa;
-    }
-
-    h1 {
-        color: #33c5ff;
-    }
+.selected {
+    box-shadow: 0 0 15px 5px #b47807;
+    border: 3px solid #4d7208;
 }
